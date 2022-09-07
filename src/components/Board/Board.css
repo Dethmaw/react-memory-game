@@ -1,0 +1,170 @@
+body {
+  background-color: aliceblue;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  height: 500px;
+  width: 500px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1em;
+  margin: 0;
+  position: absolute;
+  top: 62%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transform: rotateY(180deg);
+  animation-name: hideCell;
+  animation-duration: 5s;
+  background-color: black;
+}
+
+.cellEasy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transform: rotateY(180deg);
+  animation-name: hideCell;
+  animation-duration: 4s;
+  background-color: black;
+}
+
+.cellNightmare {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transform: rotateY(180deg);
+  animation-name: hideCell;
+  animation-duration: 2s;
+  background-color: black;
+}
+
+@keyframes hideCell {
+  0%,
+  70% {
+    transform: rotateY(0);
+    background-color: aqua;
+  }
+  100% {
+    transform: rotateY(180deg);
+    background-color: black;
+  }
+}
+
+.lit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  animation-name: light;
+  animation-duration: 1s;
+}
+
+@keyframes light {
+  0%,
+  70% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+.btn {
+  height: 100px;
+  width: 100px;
+  background-color: rgb(66, 57, 57);
+  cursor: pointer;
+  border: 3px solid black;
+}
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.white {
+  background-color: white;
+}
+
+.black {
+  background-color: black;
+}
+
+.green {
+  background-color: green;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.black {
+  background-color: black;
+}
+
+.cell.active {
+  transform: rotateY(0);
+}
+.cell.correct {
+  background-color: #65e469;
+  cursor: not-allowed;
+}
+.cell.wrong {
+  background-color: #fd245a;
+}
+.cell.active {
+  transform: scale(1);
+}
+
+.cellEasy.active {
+  transform: rotateY(0);
+}
+.cellEasy.correct {
+  background-color: #65e469;
+  cursor: not-allowed;
+}
+.cellEasy.wrong {
+  background-color: #fd245a;
+}
+.cellEasy.active {
+  transform: scale(1);
+}
+
+.cellNightmare.active {
+  transform: rotateY(0);
+}
+.cellNightmare.correct {
+  background-color: #65e469;
+  cursor: not-allowed;
+}
+.cellNightmare.wrong {
+  background-color: #fd245a;
+}
+.cellNightmare.active {
+  transform: scale(1);
+}
